@@ -274,6 +274,8 @@ public partial class AppDbContext : DbContext
 
 		#endregion
 
+		#region ToDoList
+
 		modelBuilder.Entity<ToDoList>(entity =>
         {
             entity.HasKey(e => e.TaskId).HasName("PK__ToDoList__7C6949D1F4B3258B");
@@ -299,7 +301,9 @@ public partial class AppDbContext : DbContext
                 .HasConstraintName("FK__ToDoList__Catego__4E88ABD4");
         });
 
-        OnModelCreatingPartial(modelBuilder);
+		#endregion
+
+		OnModelCreatingPartial(modelBuilder);
     }
 
 	#endregion

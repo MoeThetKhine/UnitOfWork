@@ -1,6 +1,5 @@
-﻿namespace DotNet8.UnitOfWork.DTOs.Feature.Blog
+﻿namespace DotNet8.UnitOfWork.DTOs.Feature.Blog;
+
+public class BlogListModel
 {
-	public class BlogListModel
-	{
-	}
 }

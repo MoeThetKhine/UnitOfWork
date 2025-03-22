@@ -73,6 +73,8 @@ public partial class AppDbContext : DbContext
 
 		#endregion
 
+		#region Counter
+
 		modelBuilder.Entity<Counter>(entity =>
         {
             entity.HasKey(e => new { e.Key, e.Id }).HasName("PK_HangFire_Counter");
@@ -84,7 +86,9 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.ExpireAt).HasColumnType("datetime");
         });
 
-        modelBuilder.Entity<Hash>(entity =>
+		#endregion
+
+		modelBuilder.Entity<Hash>(entity =>
         {
             entity.HasKey(e => new { e.Key, e.Field }).HasName("PK_HangFire_Hash");
 

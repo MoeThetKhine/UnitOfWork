@@ -1,6 +1,6 @@
 ﻿namespace DotNet8.UnitOfWork.DTOs.Feature.PageSetting
 {
-	internal class PageSettingModel
+	public class PageSettingModel
 	{
 	}
 }

@@ -69,4 +69,14 @@ public class Result<T>
 			StatusCode = statusCode
 		};
 	}
+
+	public static Result<T> Failure(Exception ex)
+	{
+		return new Result<T>
+		{
+			IsSuccess = false,
+			Message = ex.Message,
+			StatusCode = EnumStatusCode.InternalServerError
+		};
+	}
 }

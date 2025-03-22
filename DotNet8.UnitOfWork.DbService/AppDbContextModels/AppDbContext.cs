@@ -88,6 +88,8 @@ public partial class AppDbContext : DbContext
 
 		#endregion
 
+		#region Hash
+
 		modelBuilder.Entity<Hash>(entity =>
         {
             entity.HasKey(e => new { e.Key, e.Field }).HasName("PK_HangFire_Hash");
@@ -100,7 +102,9 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Field).HasMaxLength(100);
         });
 
-        modelBuilder.Entity<Job>(entity =>
+		#endregion
+
+		modelBuilder.Entity<Job>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_HangFire_Job");
 

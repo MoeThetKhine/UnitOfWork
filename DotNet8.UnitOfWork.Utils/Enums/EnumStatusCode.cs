@@ -1,6 +1,5 @@
-﻿namespace DotNet8.UnitOfWork.Utils.Enums
+﻿namespace DotNet8.UnitOfWork.Utils.Enums;
+
+internal class EnumStatusCode
 {
-	internal class EnumStatusCode
-	{
-	}
 }

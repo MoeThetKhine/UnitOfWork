@@ -60,6 +60,8 @@ public class Result<T>
 		};
 	}
 
+	#region Fail
+
 	public static Result<T> Fail(string message = "Failed.", EnumStatusCode statusCode = EnumStatusCode.BadRequest)
 	{
 		return new Result<T>
@@ -69,6 +71,8 @@ public class Result<T>
 			StatusCode = statusCode
 		};
 	}
+
+	#endregion
 
 	#region Failure
 

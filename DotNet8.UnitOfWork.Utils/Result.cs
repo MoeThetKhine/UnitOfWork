@@ -1,6 +1,5 @@
-﻿namespace DotNet8.UnitOfWork.Utils
+﻿namespace DotNet8.UnitOfWork.Utils;
+
+internal class Result
 {
-	internal class Result
-	{
-	}
 }

@@ -104,6 +104,8 @@ public partial class AppDbContext : DbContext
 
 		#endregion
 
+		#region Job
+
 		modelBuilder.Entity<Job>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_HangFire_Job");
@@ -119,7 +121,9 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.StateName).HasMaxLength(20);
         });
 
-        modelBuilder.Entity<JobParameter>(entity =>
+		#endregion
+
+		modelBuilder.Entity<JobParameter>(entity =>
         {
             entity.HasKey(e => new { e.JobId, e.Name }).HasName("PK_HangFire_JobParameter");
 

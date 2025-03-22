@@ -1,6 +1,4 @@
-﻿using DotNet8.UnitOfWork.Utils.Enums;
-
-namespace DotNet8.UnitOfWork.Utils;
+﻿namespace DotNet8.UnitOfWork.Utils;
 
 #region Result
 

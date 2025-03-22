@@ -70,6 +70,8 @@ public class Result<T>
 		};
 	}
 
+	#region Failure
+
 	public static Result<T> Failure(Exception ex)
 	{
 		return new Result<T>
@@ -79,6 +81,8 @@ public class Result<T>
 			StatusCode = EnumStatusCode.InternalServerError
 		};
 	}
+
+	#endregion
 
 	#region NotFound
 

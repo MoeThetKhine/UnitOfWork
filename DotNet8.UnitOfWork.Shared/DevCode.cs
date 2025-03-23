@@ -1,6 +1,5 @@
-﻿namespace DotNet8.UnitOfWork.Shared
+﻿namespace DotNet8.UnitOfWork.Shared;
+
+internal class DevCode
 {
-	internal class DevCode
-	{
-	}
 }

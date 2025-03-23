@@ -1,5 +1,9 @@
-﻿namespace DotNet8.UnitOfWork.Shared;
+﻿using Newtonsoft.Json;
 
-public class DevCode
+namespace DotNet8.UnitOfWork.Shared;
+
+public static class DevCode
 {
+	public static string ToJson(this object obj) =>
+		JsonConvert.SerializeObject(obj, Formatting.Indented);
 }

@@ -1,7 +1,4 @@
-﻿using DotNet8.UnitOfWork.DbService.AppDbContextModels;
-using DotNet8.UnitOfWork.DTOs.Feature.Blog;
-
-namespace DotNet8.UnitOfWork.Extension;
+﻿namespace DotNet8.UnitOfWork.Extension;
 
 public static class Extension
 {

@@ -1,5 +1,23 @@
-﻿namespace DotNet8.UnitOfWork.Shared;
+﻿using DotNet8.UnitOfWork.DTOs.Feature.Blog;
+using FluentValidation;
 
-public class BlogValidator
+namespace DotNet8.UnitOfWork.Shared;
+
+public class BlogValidator : AbstractValidator<BlogRequestModel>
 {
+	public BlogValidator()
+	{
+		RuleFor(x => x.BlogTitle)
+			.NotEmpty().WithMessage("Blog Title cannot be empty.")
+			.NotNull().WithMessage("Blog Title cannot be null");
+
+		RuleFor(x => x.BlogAuthor)
+			.NotEmpty().WithMessage("Blog Author cannot be empty.")
+			.NotNull().WithMessage("Blog Author cannot be null");
+
+		RuleFor(x => x.BlogContent)
+			.NotEmpty().WithMessage("Blog Content cannot be empty.")
+			.NotNull().WithMessage("Blog Content cannot be null");
+
+	}
 }

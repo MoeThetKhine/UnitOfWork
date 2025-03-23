@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{FE126F2F-9B98-498C-8940-87977588BE93}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.UnitOfWork.Shared", "DotNet8.UnitOfWork.Shared\DotNet8.UnitOfWork.Shared.csproj", "{1282A766-0A45-42AB-BBEE-37490371ED56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.UnitOfWork.Utils", "DotNet8.UnitOfWork.Utils\DotNet8.UnitOfWork.Utils.csproj", "{C3465146-29EA-4214-BDCD-7C1BFA2B03CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{95429B68-5365-426A-8820-55662B430BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.UnitOfWork.Presentation", "DotNet8.UnitOfWork.Presentation\DotNet8.UnitOfWork.Presentation.csproj", "{071C2150-143A-4837-8CE7-F3FF7F2F3AF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{C3465146-29EA-4214-BDCD-7C1BFA2B03CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3465146-29EA-4214-BDCD-7C1BFA2B03CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3465146-29EA-4214-BDCD-7C1BFA2B03CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071C2150-143A-4837-8CE7-F3FF7F2F3AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071C2150-143A-4837-8CE7-F3FF7F2F3AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071C2150-143A-4837-8CE7-F3FF7F2F3AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071C2150-143A-4837-8CE7-F3FF7F2F3AF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,5 +59,6 @@ Global
 		{FB51A4D0-4784-45E0-877C-3F5CD9AD268C} = {FE126F2F-9B98-498C-8940-87977588BE93}
 		{1282A766-0A45-42AB-BBEE-37490371ED56} = {FE126F2F-9B98-498C-8940-87977588BE93}
 		{C3465146-29EA-4214-BDCD-7C1BFA2B03CF} = {FE126F2F-9B98-498C-8940-87977588BE93}
+		{071C2150-143A-4837-8CE7-F3FF7F2F3AF2} = {95429B68-5365-426A-8820-55662B430BEF}
 	EndGlobalSection
 EndGlobal

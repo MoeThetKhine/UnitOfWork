@@ -2,6 +2,8 @@
 
 namespace DotNet8.UnitOfWork.Shared;
 
+#region DevCode
+
 public static class DevCode
 {
 	public static string ToJson(this object obj) =>
@@ -16,5 +18,6 @@ public static class DevCode
 	{
 		return source.Skip((pageNo - 1) * pageSize).Take(pageSize);
 	}
-
 }
+
+#endregion

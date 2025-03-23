@@ -1,6 +1,5 @@
-﻿namespace DotNet8.UnitOfWork.Extension
+﻿namespace DotNet8.UnitOfWork.Extension;
+
+public class Extension
 {
-	public class Extension
-	{
-	}
 }

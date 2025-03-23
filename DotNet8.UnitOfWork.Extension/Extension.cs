@@ -1,5 +1,18 @@
-﻿namespace DotNet8.UnitOfWork.Extension;
+﻿using DotNet8.UnitOfWork.DbService.AppDbContextModels;
+using DotNet8.UnitOfWork.DTOs.Feature.Blog;
 
-public class Extension
+namespace DotNet8.UnitOfWork.Extension;
+
+public static class Extension
 {
+	public static BlogModel ToModel(this TblBlog dataModel)
+	{
+		return new BlogModel
+		{
+			BlogId = dataModel.BlogId,
+			BlogTitle = dataModel.BlogTitle,
+			BlogAuthor = dataModel.BlogAuthor,
+			BlogContent = dataModel.BlogContent,
+		};
+	}
 }

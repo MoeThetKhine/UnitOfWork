@@ -1,5 +1,4 @@
-﻿
-namespace DotNet8.UnitOfWork.Presentation.Dependencies;
+﻿namespace DotNet8.UnitOfWork.Presentation.Dependencies;
 
 public static class DependencyInjection
 {

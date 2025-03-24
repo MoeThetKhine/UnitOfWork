@@ -1,7 +1,4 @@
-﻿using DotNet8.UnitOfWork.DbService.AppDbContextModels;
-using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8.UnitOfWork.Presentation.Persistance
+﻿namespace DotNet8.UnitOfWork.Presentation.Persistance
 {
 	public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	{

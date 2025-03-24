@@ -1,7 +1,4 @@
-﻿using DotNet8.UnitOfWork.DbService.AppDbContextModels;
-using DotNet8.UnitOfWork.Presentation.Persistance;
-using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace DotNet8.UnitOfWork.Presentation.Dependencies;
 
 public static class DependencyInjection

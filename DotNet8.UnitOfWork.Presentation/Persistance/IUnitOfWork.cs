@@ -2,4 +2,5 @@
 
 public interface IUnitOfWork
 {
+	IBlogRepository BlogRepository { get; }
 }

@@ -1,6 +1,4 @@
-﻿using DotNet8.UnitOfWork.DbService.AppDbContextModels;
-using DotNet8.UnitOfWork.Presentation.Persistance.Repositories;
-using DotNet8.UnitOfWork.Presentation.Persistance;
+﻿using DotNet8.UnitOfWork.Presentation.Persistance.Repositories;
 
 namespace DotNet8.UnitOfWork.Presentation
 {

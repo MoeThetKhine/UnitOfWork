@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.UnitOfWork.Presentation.Persistance;
 
+#region RepositoryBase
+
 public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 {
 	internal readonly AppDbContext _context;
@@ -11,3 +13,5 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 		_dbSet = context.Set<T>();
 	}
 }
+
+#endregion

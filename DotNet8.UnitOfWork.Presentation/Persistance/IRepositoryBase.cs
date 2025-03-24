@@ -1,6 +1,6 @@
 ﻿namespace DotNet8.UnitOfWork.Presentation.Persistance
 {
-	public interface IRepositoryBase
+	public interface IRepositoryBase<T> where T : class
 	{
 	}
 }

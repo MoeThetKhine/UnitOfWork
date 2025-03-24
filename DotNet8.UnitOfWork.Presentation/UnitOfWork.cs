@@ -1,6 +1,4 @@
-﻿using DotNet8.UnitOfWork.Presentation.Persistance.Repositories;
-
-namespace DotNet8.UnitOfWork.Presentation;
+﻿namespace DotNet8.UnitOfWork.Presentation;
 
 public class UnitOfWork : IUnitOfWork
 {

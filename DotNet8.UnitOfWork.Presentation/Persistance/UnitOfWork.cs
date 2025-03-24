@@ -1,6 +1,5 @@
-﻿namespace DotNet8.UnitOfWork.Presentation.Persistance
+﻿namespace DotNet8.UnitOfWork.Presentation.Persistance;
+
+public class UnitOfWork
 {
-	public class UnitOfWork
-	{
-	}
 }

@@ -1,5 +1,3 @@
-using DotNet8.UnitOfWork.Presentation.Dependencies;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();

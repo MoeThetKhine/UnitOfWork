@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace DotNet8.UnitOfWork.Presentation.Controllers
+namespace DotNet8.UnitOfWork.Presentation.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class BlogController : ControllerBase
 {
-	[Route("api/[controller]")]
-	[ApiController]
-	public class BlogController : ControllerBase
-	{
-	}
 }

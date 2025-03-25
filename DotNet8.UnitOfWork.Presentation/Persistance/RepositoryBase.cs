@@ -18,6 +18,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 		_dbSet.Add(entity);
 	}
 
+	public async Task AddAsync(T entity, CancellationToken cs = default)
+	{
+		await _dbSet.AddAsync(entity, cs);
+	}
+
 }
 
 #endregion

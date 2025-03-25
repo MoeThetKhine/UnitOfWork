@@ -12,6 +12,12 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 		_context = context;
 		_dbSet = context.Set<T>();
 	}
+
+	public void Add(T entity)
+	{
+		_dbSet.Add(entity);
+	}
+
 }
 
 #endregion

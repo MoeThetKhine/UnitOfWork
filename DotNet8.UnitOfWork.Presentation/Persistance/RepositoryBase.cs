@@ -60,6 +60,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	{
 		_context.SaveChanges();
 	}
+
+	public async Task SaveChangesAsync(CancellationToken cs = default)
+	{
+		await _context.SaveChangesAsync(cs);
+	}
 }
 
 #endregion

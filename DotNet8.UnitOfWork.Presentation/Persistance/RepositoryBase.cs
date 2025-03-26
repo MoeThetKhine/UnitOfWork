@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace DotNet8.UnitOfWork.Presentation.Persistance;
+﻿namespace DotNet8.UnitOfWork.Presentation.Persistance;
 
 #region RepositoryBase
 

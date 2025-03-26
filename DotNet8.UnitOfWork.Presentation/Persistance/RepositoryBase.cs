@@ -115,10 +115,15 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 
 	#endregion
 
+	#region UpdateRange
+
 	public void UpdateRange(IEnumerable<T> entities)
 	{
 		_dbSet.UpdateRange(entities);
 	}
+
+	#endregion
+
 }
 
 #endregion

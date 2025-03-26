@@ -60,11 +60,15 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	}
 
 	#endregion
+	
+	#region DeleteRange
 
 	public void DeleteRange(IEnumerable<T> entities)
 	{
 		_dbSet.RemoveRange(entities);
 	}
+
+	#endregion
 
 	public void Dispose()
 	{

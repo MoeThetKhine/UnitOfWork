@@ -38,6 +38,10 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 		_dbSet.Remove(entity);
 	}
 
+	public void DeleteRange(IEnumerable<T> entities)
+	{
+		_dbSet.RemoveRange(entities);
+	}
 }
 
 #endregion

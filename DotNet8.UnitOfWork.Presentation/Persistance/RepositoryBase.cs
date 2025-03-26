@@ -65,6 +65,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	{
 		await _context.SaveChangesAsync(cs);
 	}
+
+	public void Update(T entity)
+	{
+		_dbSet.Update(entity);
+	}
 }
 
 #endregion

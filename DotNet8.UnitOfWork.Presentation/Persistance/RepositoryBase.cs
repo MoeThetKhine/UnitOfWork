@@ -1,4 +1,7 @@
-﻿namespace DotNet8.UnitOfWork.Presentation.Persistance;
+﻿using System.Linq.Expressions;
+using System.Linq;
+
+namespace DotNet8.UnitOfWork.Presentation.Persistance;
 
 #region RepositoryBase
 
@@ -46,6 +49,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	public void Dispose()
 	{
 		_context.Dispose();
+	}
+
+	public IQueryable<T> Query(Expression<Func<T, bool>>? expression = null)
+	{
+		return expression is null ? _dbSet.AsQueryable() : _dbSet.Where(expression);
 	}
 }
 

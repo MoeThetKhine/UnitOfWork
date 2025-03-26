@@ -33,6 +33,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 		await _dbSet.AddRangeAsync(entities, cs);
 	}
 
+	public void Delete(T entity)
+	{
+		_dbSet.Remove(entity);
+	}
+
 }
 
 #endregion

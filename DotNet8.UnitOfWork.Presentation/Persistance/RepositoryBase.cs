@@ -42,6 +42,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	{
 		_dbSet.RemoveRange(entities);
 	}
+
+	public void Dispose()
+	{
+		_context.Dispose();
+	}
 }
 
 #endregion

@@ -55,6 +55,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	{
 		return expression is null ? _dbSet.AsQueryable() : _dbSet.Where(expression);
 	}
+
+	public void SaveChanges()
+	{
+		_context.SaveChanges();
+	}
 }
 
 #endregion

@@ -70,6 +70,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 	{
 		_dbSet.Update(entity);
 	}
+
+	public void UpdateRange(IEnumerable<T> entities)
+	{
+		_dbSet.UpdateRange(entities);
+	}
 }
 
 #endregion

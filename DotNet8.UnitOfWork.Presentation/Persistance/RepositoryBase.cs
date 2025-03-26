@@ -23,6 +23,11 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
 		await _dbSet.AddAsync(entity, cs);
 	}
 
+	public void AddRange(IEnumerable<T> entities)
+	{
+		_dbSet.AddRange(entities);
+	}
+
 }
 
 #endregion

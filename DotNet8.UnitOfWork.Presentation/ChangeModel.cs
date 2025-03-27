@@ -4,6 +4,9 @@ namespace DotNet8.UnitOfWork.Presentation;
 
 public static class ChangeModel
 {
+
+	#region Change
+
 	public static TblBlog Change(this BlogRequestModel requestModel)
 	{
 		return new TblBlog
@@ -13,4 +16,6 @@ public static class ChangeModel
 			BlogContent = requestModel.BlogContent,
 		};
 	}
+
+	#endregion
 }

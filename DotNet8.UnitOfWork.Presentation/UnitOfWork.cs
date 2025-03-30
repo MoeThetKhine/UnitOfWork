@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.UnitOfWork.Presentation;
 
+#region UnitOfWork
+
 public class UnitOfWork : IUnitOfWork
 {
 	public readonly AppDbContext _context;
@@ -14,5 +16,6 @@ public class UnitOfWork : IUnitOfWork
 	}
 
 	#endregion
-
 }
+
+#endregion

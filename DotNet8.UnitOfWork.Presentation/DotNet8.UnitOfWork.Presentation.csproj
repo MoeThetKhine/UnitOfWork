@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DotNet8.UnitOfWork.DbService\DotNet8.UnitOfWork.DbService.csproj" />
     <ProjectReference Include="..\DotNet8.UnitOfWork.DTOs\DotNet8.UnitOfWork.DTOs.csproj" />
+    <ProjectReference Include="..\DotNet8.UnitOfWork.Shared\DotNet8.UnitOfWork.Shared.csproj" />
   </ItemGroup>
 
 </Project>

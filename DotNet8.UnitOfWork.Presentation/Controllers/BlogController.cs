@@ -35,6 +35,20 @@ public class BlogController : ControllerBase
 		return Ok(blog);
 	}
 
-	
+	[HttpPost]
+	public async Task<IActionResult> CreateBlogAsync([FromBody] BlogRequestModel newBlog, CancellationToken cancellationToken)
+	{
+		if (newBlog is null)
+		{
+			return BadRequest(new { Message = "Invalid blog data." });
+		}
+
+		var blogEntity = newBlog.Change();
+
+		await _unitOfWork.BlogRepository.AddAsync(blogEntity,cancellationToken);
+		await _unitOfWork.BlogRepository.SaveChangesAsync(cancellationToken);
+
+		return Ok("New Blog is Created");
+	}
 
 }

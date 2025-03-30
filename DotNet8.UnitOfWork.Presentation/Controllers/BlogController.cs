@@ -20,4 +20,18 @@ public class BlogController : ControllerBase
 		var lst = await query.ToListAsync(cancellationToken);
 		return Ok(lst);
 	}
+
+	[HttpGet("{id}")]
+	public async Task<IActionResult> GetBlogByIdAsync(int id, CancellationToken cs)
+	{
+		var blog = await _unitOfWork.BlogRepository
+			.Query(b => b.BlogId == id)
+			.FirstOrDefaultAsync(cs);
+
+		if(blog is null)
+		{
+			return NotFound(new { Message = $"Blog with ID{id} not found." });
+		}
+		return Ok(blog);
+	}
 }

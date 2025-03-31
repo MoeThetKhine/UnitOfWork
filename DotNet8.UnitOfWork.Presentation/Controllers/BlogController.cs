@@ -13,6 +13,7 @@ public class BlogController : ControllerBase
 		_unitOfWork = unitOfWork;
 	}
 
+	#region GetBlogsAsync
 
 	[HttpGet]
 	public async Task<IActionResult> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
@@ -21,6 +22,8 @@ public class BlogController : ControllerBase
 		var lst = await query.ToListAsync(cancellationToken);
 		return Ok(lst);
 	}
+
+	#endregion
 
 	[HttpGet("{id}")]
 	public async Task<IActionResult> GetBlogByIdAsync(int id, CancellationToken cs)

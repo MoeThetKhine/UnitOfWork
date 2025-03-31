@@ -13,6 +13,7 @@ public class BlogController : ControllerBase
 		_unitOfWork = unitOfWork;
 	}
 
+
 	[HttpGet]
 	public async Task<IActionResult> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
 	{
@@ -49,6 +50,32 @@ public class BlogController : ControllerBase
 		await _unitOfWork.BlogRepository.SaveChangesAsync(cancellationToken);
 
 		return Ok("New Blog is Created");
+	}
+
+	[HttpPut("{id}")]
+	public async Task<IActionResult> UpdateBlogAsync(int id, [FromBody] BlogRequestModel updateBlog, CancellationToken cancellationToken)
+	{
+		if (updateBlog is null)
+		{
+			return BadRequest(new { Message = "Invalid blog data." });
+		}
+
+		var blogEntity = await _unitOfWork.BlogRepository.Query(x  => x.BlogId == id).FirstOrDefaultAsync(cancellationToken);
+
+		if(blogEntity is null)
+		{
+			return NotFound(new { Message = $"Blog with ID {id} not found." });
+		}
+
+		blogEntity.BlogTitle = updateBlog.BlogTitle;
+		blogEntity.BlogAuthor = updateBlog.BlogAuthor;
+		blogEntity.BlogContent = updateBlog.BlogContent;
+
+		_unitOfWork.BlogRepository.Update(blogEntity);
+		await _unitOfWork.BlogRepository.SaveChangesAsync(cancellationToken);
+
+		return Ok(new { Message = "Blog Updated Successfully.", blogEntity });
+
 	}
 
 }

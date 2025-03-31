@@ -6,3 +6,4 @@ global using Microsoft.AspNetCore.Mvc;
 global using DotNet8.UnitOfWork.Presentation.Dependencies;
 global using System.Linq.Expressions;
 global using DotNet8.UnitOfWork.DTOs.Feature.Blog;
+global using DotNet8.UnitOfWork.Shared;

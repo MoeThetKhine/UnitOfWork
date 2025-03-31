@@ -1,6 +1,4 @@
-﻿using DotNet8.UnitOfWork.Shared;
-
-namespace DotNet8.UnitOfWork.Presentation.Controllers;
+﻿namespace DotNet8.UnitOfWork.Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
